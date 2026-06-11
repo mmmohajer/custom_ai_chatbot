@@ -1,0 +1,54 @@
+@baseUrl = http://localhost/api
+
+### Health Check
+GET {{baseUrl}}/
+
+###
+
+### Create Knowledge Base Chunk
+POST {{baseUrl}}/aibot/knowledge-base/
+Content-Type: application/json
+
+{
+    "chunk_text": "This is the first chunk of text.",
+    "url": "https://example.com/page1"
+}
+
+###
+
+### List Knowledge Base Chunks
+GET {{baseUrl}}/aibot/knowledge-base/?page=1&page_size=10
+
+###
+
+### Get Knowledge Base Chunk By ID
+GET {{baseUrl}}/aibot/knowledge-base/1/
+
+###
+
+### Update Knowledge Base Chunk
+PATCH {{baseUrl}}/aibot/knowledge-base/1/
+Content-Type: application/json
+
+{
+    "chunk_text": "Updated chunk text."
+}
+
+###
+
+### Delete Knowledge Base Chunk
+DELETE {{baseUrl}}/aibot/knowledge-base/1/
+
+###
+
+### Chat with AI Bot
+POST {{baseUrl}}/aibot/knowledge-base/chat/
+Content-Type: application/json
+
+{
+    "message": "Explain me more about your mentorship program.",
+    "similarity_threshold": 0.3,
+    "top_k": 5
+}
+
+###
