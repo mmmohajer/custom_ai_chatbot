@@ -46,9 +46,19 @@ POST {{baseUrl}}/aibot/knowledge-base/chat/
 Content-Type: application/json
 
 {
-    "message": "Explain me more about your mentorship program.",
+    "message": "What services do you offer to your clients?",
     "similarity_threshold": 0.3,
     "top_k": 5
 }
 
 ###
+
+### Chat with AI Bot
+POST {{baseUrl}}/aibot/knowledge-base/chat/
+Content-Type: application/json
+
+{
+    "message": "Explain me more about your mentorship program.",
+    "similarity_threshold": 0.3,
+    "top_k": 5
+}
