@@ -180,6 +180,10 @@ Install backend dependencies:
 pip install -r api/requirements.txt
 ```
 
+```bash
+pip install -r scraper/requirements.txt
+```
+
 Install frontend dependencies:
 
 ```bash
